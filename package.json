@@ -1,0 +1,52 @@
+{
+  "name": "@adobe/generator-app-asset-compute",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": "^14 || ^16"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/generator-app-asset-compute.git"
+  },
+  "scripts": {
+    "test": "npm run lint && npm run unit-tests",
+    "lint": "eslint .",
+    "unit-tests": "jest -c ./jest.config.js"
+  },
+  "keywords": [
+    "yeoman",
+    "generator",
+    "codegen",
+    "aio",
+    "adobeio",
+    "app",
+    "templates"
+  ],
+  "author": "Adobe Inc.",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@types/jest": "^25.1.0",
+    "eol": "^0.9.1",
+    "eslint": "^7.1.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-jest": "^23.1.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "jest": "^27",
+    "stdout-stderr": "^0.1.13",
+    "yeoman-assert": "^3.1.1",
+    "yeoman-test": "^6.0.0",
+    "yeoman-environment": "^3.2.0",
+    "lodash.clonedeep": "^4.5.0",
+    "js-yaml": "^4.1.0"
+  },
+  "dependencies": {
+    "@adobe/generator-app-common-lib": "0.0.0",
+    "upath": "^2.0.1",
+    "yeoman-generator": "^5.4.2"
+  }
+}

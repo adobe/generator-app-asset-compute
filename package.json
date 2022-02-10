@@ -22,7 +22,8 @@
     "aio",
     "adobeio",
     "app",
-    "templates"
+    "templates",
+    "ecosystem:aio-app-builder-template"
   ],
   "author": "Adobe Inc.",
   "license": "Apache-2.0",

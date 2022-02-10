@@ -14,7 +14,7 @@ const upath = require('upath')
 
 const Generator = require('yeoman-generator')
 
-const { constants, utils } = require('@adobe/generator-aio-app-libs')
+const { constants, utils } = require('@adobe/generator-app-common-lib')
 const { runtimeManifestKey } = constants
 
 /*

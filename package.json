@@ -1,7 +1,7 @@
 {
   "name": "@adobe/generator-app-asset-compute",
   "version": "0.1.0",
-  "description": "",
+  "description": "Extensibility template for generator-aio-app",
   "main": "index.js",
   "engines": {
     "node": "^14 || ^16"

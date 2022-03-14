@@ -22,7 +22,6 @@ module.exports = {
   testPathIgnorePatterns: [
     '<rootDir>/node_modules/'
   ],
-  testMatch: ['**/test/templates/**'],
   coverageThreshold: {
     global: {
       branches: 100,

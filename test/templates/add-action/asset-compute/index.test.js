@@ -18,10 +18,10 @@ const path = require('path')
 const { EOL } = require('os')
 const cloneDeep = require('lodash.clonedeep')
 
-const AssetComputeGenerator = require('../../../../templates/add-action/asset-compute')
+const { addAction: { assetCompute: AssetComputeGenerator } } = require('../../../../index')
 const Generator = require('yeoman-generator')
 
-describe.skip('prototype', () => {
+describe('prototype', () => {
   test('exports a yeoman generator', () => {
     expect(AssetComputeGenerator.prototype).toBeInstanceOf(Generator)
   })

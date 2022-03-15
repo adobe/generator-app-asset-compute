@@ -17,7 +17,7 @@ const path = require('path')
 const assert = require('yeoman-assert')
 const yaml = require('js-yaml')
 
-const AssetComputeWorker = require('../../../../templates/extension/asset-compute-worker')
+const { extension: { assetComputeWorker: AssetComputeWorker } } = require('../../../../index')
 const Generator = require('yeoman-generator')
 
 const composeWith = jest.spyOn(Generator.prototype, 'composeWith')

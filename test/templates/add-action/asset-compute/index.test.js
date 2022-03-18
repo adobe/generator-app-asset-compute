@@ -18,12 +18,12 @@ const path = require('path')
 const { EOL } = require('os')
 const cloneDeep = require('lodash.clonedeep')
 
-const theGeneratorPath = require.resolve('../../../generators/add-action/asset-compute')
+const { addAction: { assetCompute: AssetComputeGenerator } } = require('../../../../index')
 const Generator = require('yeoman-generator')
 
 describe('prototype', () => {
   test('exports a yeoman generator', () => {
-    expect(require(theGeneratorPath).prototype).toBeInstanceOf(Generator)
+    expect(AssetComputeGenerator.prototype).toBeInstanceOf(Generator)
   })
 })
 
@@ -91,7 +91,7 @@ describe('run', () => {
     const prevDotEnvContent = `PREVIOUSCONTENT${EOL}`
     const actionName = 'worker' // default value
 
-    await helpers.run(theGeneratorPath)
+    await helpers.run(AssetComputeGenerator)
       .withOptions(options)
       .inTmpDir(dir => {
         fs.writeFileSync(path.join(dir, '.env'), prevDotEnvContent)
@@ -110,7 +110,7 @@ describe('run', () => {
     options['skip-prompt'] = true
     const prevDotEnvContent = `PREVIOUSCONTENT${EOL}`
 
-    await helpers.run(theGeneratorPath)
+    await helpers.run(AssetComputeGenerator)
       .withOptions(options)
       .inTmpDir(dir => {
         fs.writeFileSync('ext.config.yaml', yaml.dump({
@@ -143,7 +143,7 @@ describe('run', () => {
     const prevDotEnvContent = `PREVIOUSCONTENT${EOL}`
     const actionName = 'worker'
 
-    await helpers.run(theGeneratorPath)
+    await helpers.run(AssetComputeGenerator)
       .withOptions(options)
       .inTmpDir(dir => {
         fs.writeFileSync('package.json', JSON.stringify({
@@ -166,7 +166,7 @@ describe('run', () => {
     const prevDotEnvContent = `PREVIOUSCONTENT${EOL}`
     const actionName = 'new-asset-compute-action'
 
-    await helpers.run(theGeneratorPath)
+    await helpers.run(AssetComputeGenerator)
       .withOptions(options)
       .withPrompts({ actionName: 'new-asset-compute-action' })
       .inTmpDir(dir => {
@@ -186,7 +186,7 @@ describe('run', () => {
     options['skip-prompt'] = false
     const prevDotEnvContent = `PREVIOUSCONTENT${EOL}`
 
-    await helpers.run(theGeneratorPath)
+    await helpers.run(AssetComputeGenerator)
       .withOptions(options)
       .withPrompts({ actionName: 'new-asset-compute-action' })
       .inTmpDir(dir => {
@@ -194,7 +194,7 @@ describe('run', () => {
       })
 
     const actionName2 = 'new-asset-compute-action-second-of-its-name'
-    await helpers.run(theGeneratorPath)
+    await helpers.run(AssetComputeGenerator)
       .withOptions(options)
       .withPrompts({ actionName: actionName2 })
   })
@@ -218,7 +218,7 @@ describe('run', () => {
       }
     })
 
-    await helpers.run(theGeneratorPath)
+    await helpers.run(AssetComputeGenerator)
       .withOptions(options)
       .withPrompts({ actionName: 'new-asset-compute-action' })
       .inTmpDir(dir => {
@@ -227,7 +227,7 @@ describe('run', () => {
       })
 
     const actionName2 = 'new-asset-compute-action-second-of-its-name'
-    await helpers.run(theGeneratorPath)
+    await helpers.run(AssetComputeGenerator)
       .withOptions(options)
       .withPrompts({ actionName: actionName2 })
   })

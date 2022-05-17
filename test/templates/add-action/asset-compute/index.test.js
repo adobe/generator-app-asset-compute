@@ -18,7 +18,7 @@ const path = require('path')
 const { EOL } = require('os')
 const cloneDeep = require('lodash.clonedeep')
 
-const { addAction: { assetCompute: AssetComputeGenerator } } = require('../../../../index')
+const AssetComputeGenerator = require('../../../../templates/add-action/asset-compute')
 const Generator = require('yeoman-generator')
 
 describe('prototype', () => {

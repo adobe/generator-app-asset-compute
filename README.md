@@ -19,7 +19,7 @@ governing permissions and limitations under the License.
 
 # generator-app-asset-compute
 
-Extensibility template for [generator-aio-app](https://github.com/adobe/generator-aio-app)
+Extensibility template for Asset Compute, for App Builder
 
 
 # Contributing

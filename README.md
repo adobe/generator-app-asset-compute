@@ -10,6 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 -->
 
+# @adobe/generator-app-asset-compute
 
 [![Version](https://img.shields.io/npm/v/@adobe/generator-app-asset-compute.svg)](https://npmjs.org/package/@adobe/generator-app-asset-compute)
 [![Downloads/week](https://img.shields.io/npm/dw/@adobe/generator-app-asset-compute.svg)](https://npmjs.org/package/@adobe/generator-app-asset-compute)
@@ -17,15 +18,12 @@ governing permissions and limitations under the License.
 [![License](https://img.shields.io/npm/l/@adobe/generator-app-asset-compute.svg)](https://github.com/adobe/generator-app-asset-compute/blob/main/package.json)
 [![Codecov Coverage](https://img.shields.io/codecov/c/github/adobe/generator-app-asset-compute/master.svg?style=flat-square)](https://codecov.io/gh/adobe/generator-app-asset-compute/)
 
-# @adobe/generator-app-asset-compute
-
 Extensibility template for Asset Compute, for App Builder
 
+## Contributing
 
-# Contributing
 Contributions are welcomed! Read the [Contributing Guide](CONTRIBUTING.md) for more information.
 
-
-# Licensing
+## Licensing
 
 This project is licensed under the Apache V2 License. See [LICENSE](LICENSE) for more information.

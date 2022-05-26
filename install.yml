@@ -9,3 +9,5 @@ extension:
 
 services:
 - code: AssetComputeSDK
+
+runtime: true

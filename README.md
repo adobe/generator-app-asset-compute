@@ -17,7 +17,7 @@ governing permissions and limitations under the License.
 [![License](https://img.shields.io/npm/l/@adobe/generator-app-asset-compute.svg)](https://github.com/adobe/generator-app-asset-compute/blob/main/package.json)
 [![Codecov Coverage](https://img.shields.io/codecov/c/github/adobe/generator-app-asset-compute/master.svg?style=flat-square)](https://codecov.io/gh/adobe/generator-app-asset-compute/)
 
-# generator-app-asset-compute
+# @adobe/generator-app-asset-compute
 
 Extensibility template for Asset Compute, for App Builder
 

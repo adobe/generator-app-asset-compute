@@ -53,7 +53,12 @@ describe('run', () => {
         fs.writeFileSync(path.join(dir, '.env'), 'FAKECONTENT')
       })
     expect(composeWith).toHaveBeenCalledTimes(1)
-    expect(composeWith).toHaveBeenCalledWith(expect.stringContaining(path.normalize('add-action/asset-compute')), expect.any(Object))
+    expect(composeWith).toHaveBeenCalledWith(
+      expect.objectContaining({
+        Generator: expect.any(Generator.constructor),
+        path: 'unknown'
+      }),
+      expect.any(Object))
     assertScripts()
   })
 })

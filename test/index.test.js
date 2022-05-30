@@ -17,7 +17,7 @@ const path = require('path')
 const assert = require('yeoman-assert')
 const yaml = require('js-yaml')
 
-const { extension: { assetComputeWorker: AssetComputeWorker } } = require('../../../../index')
+const AssetComputeWorker = require('../index')
 const Generator = require('yeoman-generator')
 
 const composeWith = jest.spyOn(Generator.prototype, 'composeWith')
@@ -53,7 +53,12 @@ describe('run', () => {
         fs.writeFileSync(path.join(dir, '.env'), 'FAKECONTENT')
       })
     expect(composeWith).toHaveBeenCalledTimes(1)
-    expect(composeWith).toHaveBeenCalledWith(expect.stringContaining(path.normalize('add-action/asset-compute')), expect.any(Object))
+    expect(composeWith).toHaveBeenCalledWith(
+      expect.objectContaining({
+        Generator: expect.any(Generator.constructor),
+        path: 'unknown'
+      }),
+      expect.any(Object))
     assertScripts()
   })
 })

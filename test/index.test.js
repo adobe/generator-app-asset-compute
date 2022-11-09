@@ -40,8 +40,8 @@ describe('prototype', () => {
 
 function assertScripts () {
   const config = yaml.load(fs.readFileSync('src/dx-asset-compute-worker-1/ext.config.yaml').toString())
-  assert.strictEqual(config.hooks.test, 'adobe-asset-compute test-worker')
-  assert.strictEqual(config.hooks['post-app-run'], 'adobe-asset-compute devtool')
+  assert.strictEqual(config.hooks.test, 'adobe-asset-compute asset-compute:test-worker')
+  assert.strictEqual(config.hooks['post-app-run'], 'adobe-asset-compute asset-compute:devtool')
 }
 
 describe('run', () => {

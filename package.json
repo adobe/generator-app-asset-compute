@@ -11,7 +11,8 @@
     "url": "https://github.com/adobe/generator-app-asset-compute.git"
   },
   "scripts": {
-    "test": "npm run lint && npm run unit-tests",
+    "validation": "npx tv run-checks .",
+    "test": "npm run lint && npm run unit-tests && npm run validation",
     "lint": "eslint .",
     "unit-tests": "jest -c ./jest.config.js"
   },
@@ -28,6 +29,7 @@
   "author": "Adobe Inc.",
   "license": "Apache-2.0",
   "devDependencies": {
+    "@adobe/aio-lib-template-validation": "^4.0.0",
     "@types/jest": "^25.1.0",
     "eol": "^0.9.1",
     "eslint": "^7.1.0",
@@ -38,12 +40,12 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
     "jest": "^27",
+    "js-yaml": "^4.1.0",
+    "lodash.clonedeep": "^4.5.0",
     "stdout-stderr": "^0.1.13",
     "yeoman-assert": "^3.1.1",
-    "yeoman-test": "^6.0.0",
     "yeoman-environment": "^3.2.0",
-    "lodash.clonedeep": "^4.5.0",
-    "js-yaml": "^4.1.0"
+    "yeoman-test": "^6.0.0"
   },
   "dependencies": {
     "@adobe/generator-add-action-asset-compute": "^1.0.0",

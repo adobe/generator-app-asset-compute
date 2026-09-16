@@ -9,13 +9,13 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-import path from 'node:path'
-import upath from 'upath'
+const path = require('path')
+const upath = require('upath')
 
-import Generator from 'yeoman-generator'
-import assetComputeAction from '@adobe/generator-add-action-asset-compute'
+const Generator = require('yeoman-generator')
+const assetComputeAction = require('@adobe/generator-add-action-asset-compute')
 
-import { constants, utils } from '@adobe/generator-app-common-lib'
+const { constants, utils } = require('@adobe/generator-app-common-lib')
 const { runtimeManifestKey } = constants
 
 /*
@@ -117,4 +117,4 @@ class DxAssetComputeWorker1 extends Generator {
   }
 }
 
-export default DxAssetComputeWorker1
+module.exports = DxAssetComputeWorker1
